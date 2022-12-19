@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.feature{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+  font-size: 2rem;
+  border-radius: 0.3rem !important;
+  background-image: var(--bs-gradient) !important;
+  margin-top: -1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
