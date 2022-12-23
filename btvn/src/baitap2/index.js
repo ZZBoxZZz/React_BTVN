@@ -14,6 +14,7 @@ export default class BaiTap2 extends Component {
       }
 
     handelDetail = (glasses) => {
+        console.log(glasses);
         this.setState({
           detail: glasses,
         });
@@ -28,11 +29,20 @@ export default class BaiTap2 extends Component {
     });
   };
   render() {
+    const {detail} = this.state;
     return (
-      <div>
-        <div className="col-8">
+      <div className='container d-flex'>
+        <div className="col-md-6">
               <div className="row">{this.renderGlasses()}</div>
-            </div>
+        </div>
+        <div className="col-md-6 model">
+              {/* <img src='./glassesImage/model.jpg' className="img-fluid mt-4" height="500"/> */}
+              <div class="vglasses__model" ><img src= {detail.url}/></div>
+              <div id="glassesInfo" className="vglasses__info">
+                <p className='text-danger'>${detail.price}</p>
+                <p>{detail.desc}</p>
+                 </div>
+        </div>
       </div>
     )
   }
